@@ -31,7 +31,7 @@ export const options = {
 		},
 		title: {
 			display: true,
-			text: "Revenue Growth",
+			text: "Revenue vs Expenses vs Cash Flow",
 		},
 	},
 };
@@ -54,34 +54,26 @@ const financialData = {
 	labels,
 	datasets: [
 		{
-			label: "current growth",
+			label: "revenue",
 			data: Object.values(mockData.financial_data.revenue),
 		},
 		{
-			label: "projected growth +10%",
-			data: getProjectedGrowth(),
+			label: "expenses",
+			data: Object.values(mockData.financial_data.expenses),
 			borderColor: "purple",
 			backgroundColor: "purple",
 		},
 		{
-			label: "projected growth +20%",
-			data: getProjectedGrowth(1.02),
+			label: "cash flow",
+			data: Object.values(mockData.financial_data.cash_flow),
 			borderColor: "green",
 			backgroundColor: "green",
+			pointHoverBackgroundColor: "light green",
 		},
 	],
 };
 
-function getProjectedGrowth(percentage = 1.01) {
-	let growth: number[] = [Object.values(mockData.financial_data.revenue)[0]];
-	for (let i = 1; i < labels.length; i++) {
-		let calc = Object.values(mockData.financial_data.revenue)[i] * percentage;
-		growth.push(calc);
-	}
-	return growth;
-}
-
-export function RevenueChart() {
+export function ExpensesProfitCashChart() {
 	return (
 		<div style={{ height: "350px", minWidth: "300px" }}>
 			<Line

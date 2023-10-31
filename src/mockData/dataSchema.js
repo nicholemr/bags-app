@@ -42,6 +42,20 @@ export const schema = {
 						"december",
 					],
 				},
+				total_debt: {
+					type: "number",
+				},
+				minimum_monthly_payment: {
+					type: "number",
+				},
+				bank_account_balance: {
+					type: "object",
+					properties: {
+						checking: { type: "number" },
+						savings: { type: "number" },
+					},
+					required: ["checking", "savings"],
+				},
 				expenses: {
 					type: "object",
 					properties: {
