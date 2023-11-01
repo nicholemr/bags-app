@@ -1,3 +1,5 @@
+![Demo](src/demoVideo.mov)
+
 # Bags Technical Assessment
 
 This app uses mock data to generate a visualization of the financial health of a business. The visualization is created using chat.js and react-chartjs-2.
