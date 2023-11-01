@@ -1,5 +1,4 @@
 ![App Screenshot](./src/appScreenshot.png)
-![App Demo](./src/demoVideo.mov)
 
 # Bags Technical Assessment
 
