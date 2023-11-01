@@ -1,4 +1,4 @@
-![Demo](src/demoVideo.mov)
+![Demo](./src/demoVideo.mov)
 
 # Bags Technical Assessment
 
