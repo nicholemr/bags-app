@@ -46,8 +46,8 @@ export const options = {
 		},
 		zoom: {
 			limits: {
-				x: { min: 0, max: 30, minRange: 50 },
-				y: { min: 0, max: 25000, minRange: 50 },
+				x: { min: 0, max: 13, minRange: 50 },
+				y: { min: 20000, max: 55000, minRange: 50 },
 			},
 			pan: {
 				enabled: true,

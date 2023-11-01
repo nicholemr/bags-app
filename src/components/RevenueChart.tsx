@@ -46,8 +46,8 @@ export const options = {
 		},
 		zoom: {
 			limits: {
-				x: { min: 0, max: 30, minRange: 50 },
-				y: { min: 0, max: 25000, minRange: 50 },
+				x: { min: 0, max: 12, minRange: 5 },
+				y: { min: 15000, max: 35000, minRange: 50 },
 			},
 			pan: {
 				enabled: true,
@@ -88,7 +88,7 @@ const financialData = {
 	datasets: [
 		{
 			label: "current growth",
-			data: Object.values(mockData.financial_data.revenue),
+			data: Object.values(mockData.financial_data.projected_revenue),
 			borderColor: "rgb(53, 162, 235)",
 			backgroundColor: "rgba(53, 162, 235, 0.5)",
 		},
@@ -108,9 +108,12 @@ const financialData = {
 };
 
 function getProjectedGrowth(percentage = 1.01) {
-	let growth: number[] = [Object.values(mockData.financial_data.revenue)[0]];
+	let growth: number[] = [
+		Object.values(mockData.financial_data.projected_revenue)[0],
+	];
 	for (let i = 1; i < labels.length; i++) {
-		let calc = Object.values(mockData.financial_data.revenue)[i] * percentage;
+		let calc =
+			Object.values(mockData.financial_data.projected_revenue)[i] * percentage;
 		growth.push(calc);
 	}
 	return growth;

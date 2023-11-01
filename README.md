@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Bags Technical Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app uses mock data to generate a visualization of the financial health of a business. The visualization is created using chat.js and react-chartjs-2.
+
+The data contains the following fields:
+
+- **revenue**: The total amount of money the business has made in a given month.
+- **expenses**: The total amount of money the business has spent in a given month.
+- **cash_flow**: The total amount of money the business has made minus the total amount of money the business has spent in a given month.
+- **projected_revenue**: The total amount of money the business is expected to make in a given month.
+
+The data is displayed in a line chart with the following features:
+
+- ability to zoom in and out of the chart
+- ability to pan the chart
+- ability to hover over a point to see the exact value using the tooltip
+- ability to reset the chart view to the original view
+
+The mock data along with a representation of its schema can be found in the `src/mockData` folder.
+
+### Design Rationale
+
+I chose to use a line chart because it is a simple way to visualize the data. It is easy to see the trends in the data and the relationship between the different data points.
+
+I decided to use chart.js because it is a simple library that is easy to use and has a lot of community support. However, this library required additional plugins for react and zooming features.
+
+Although chartjs is easy to use, the documentation is not very clear. I had to do a lot of research to figure out how to implement the zooming and panning features and make them work adequately.
 
 ## Available Scripts
 

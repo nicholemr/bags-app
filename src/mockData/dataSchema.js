@@ -87,7 +87,7 @@ export const schema = {
 						"december",
 					],
 				},
-				profit_margin: {
+				cash_flow: {
 					type: "object",
 					properties: {
 						january: { type: "number" },
@@ -118,7 +118,7 @@ export const schema = {
 						"december",
 					],
 				},
-				cash_flow: {
+				projected_revenue: {
 					type: "object",
 					properties: {
 						january: { type: "number" },
