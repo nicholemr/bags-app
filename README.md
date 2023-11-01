@@ -1,4 +1,4 @@
-[App Screenshot](./src/appScreenshot.png)
+![App Screenshot](./src/appScreenshot.png)
 
 # Bags Technical Assessment
 
